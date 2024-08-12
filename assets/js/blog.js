@@ -1,33 +1,23 @@
-document.addEventListener('DOMContentLoaded', () => {
-    if (document.getElementById('postsContainer')) {
-      loadPostsPage();
-    }
-  });
+document.addEventListener('DOMContentLoaded', function() {
+    const posts = JSON.parse(localStorage.getItem('posts')) || [];
+    const postsContainer = document.getElementById('posts');
   
-  function loadPostsPage() {
-    const toggleModeButton = document.getElementById('toggleMode');
-    const backButton = document.getElementById('backButton');
-    const postsContainer = document.getElementById('postsContainer');
-  
-    toggleModeButton.addEventListener('click', toggleLightDarkMode);
-    backButton.addEventListener('click', () => {
-      window.location.href = 'index.html';
-    });
-  
-    const posts = getBlogPosts();
-    if (posts.length > 0) {
-      posts.forEach(post => {
+    posts.forEach(post => {
         const postElement = document.createElement('div');
-        postElement.classList.add('blog-post');
+        postElement.className = 'blog-entry'; // Updated to match the CSS class
         postElement.innerHTML = `
-          <h2>${post.title}</h2>
-          <p>${post.content}</p>
-          <p><em>Posted by: ${post.username}</em></p>
+            <h2>${post.title}</h2>
+            <p>${post.content}</p>
+            <small>by ${post.username}</small>
         `;
         postsContainer.appendChild(postElement);
-      });
-    } else {
-      postsContainer.innerHTML = '<p>No posts available.</p>';
-    }
-  }
+    });
   
+    document.getElementById('toggleMode').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+    });
+  
+    document.getElementById('backButton').addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+  });

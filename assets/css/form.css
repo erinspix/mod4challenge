@@ -1,0 +1,48 @@
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #00ced1, #ff69b4); /* Gradient background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    margin-top: 1rem;
+    color: white;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+}
+
+input, textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 2px solid #ff69b4; /* Bright pink border */
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #00ced1; /* Cyan border on focus */
+}
+
+button {
+    background-color: #ff69b4; /* Bright pink button */
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+}
+
+button:hover {
+    background-color: #ffa07a; /* Light coral on hover */
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+}

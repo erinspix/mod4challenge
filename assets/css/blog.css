@@ -1,0 +1,36 @@
+.post {
+    background: linear-gradient(135deg, #ff69b4, #ffa07a); /* Gradient background */
+    border: 2px solid #ff69b4; /* Bright pink border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    color: white;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+    padding: 1rem; /* Padding inside each post */
+    margin: 15px 0; /* Space between posts */
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box;
+    text-align: left; /* Align text to the left */
+}
+
+.post h2 {
+    margin: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid white;
+}
+
+.post p {
+    margin: 10px 0;
+}
+
+.post small {
+    display: block;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Optional: Styling for dark mode */
+body.dark-mode .post {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
