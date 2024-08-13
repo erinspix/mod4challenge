@@ -1,11 +1,11 @@
 function saveBlogPost(blogPost) {
     const posts = getBlogPosts();
     posts.push(blogPost);
-    localStorage.setItem('blogPosts', JSON.stringify(posts));
+    localStorage.setItem('posts', JSON.stringify(posts));
   }
   
   function getBlogPosts() {
-    return JSON.parse(localStorage.getItem('blogPosts')) || [];
+    return JSON.parse(localStorage.getItem('posts')) || [];
   }
   
   function toggleLightDarkMode() {

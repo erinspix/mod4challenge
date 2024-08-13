@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     posts.forEach(post => {
         const postElement = document.createElement('div');
-        postElement.className = 'blog-entry'; // Updated to match the CSS class
+        postElement.className = 'post'; // Ensure the class is 'post' for styling
         postElement.innerHTML = `
             <h2>${post.title}</h2>
             <p>${post.content}</p>
@@ -20,4 +20,4 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('backButton').addEventListener('click', function() {
         window.location.href = 'index.html';
     });
-  });
+});
