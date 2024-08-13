@@ -22,3 +22,7 @@ document.getElementById('blogForm').addEventListener('submit', function(event) {
 
   window.location.href = 'blog.html';
 });
+
+document.getElementById('toggleMode').addEventListener('click', function() {
+  document.body.classList.toggle('dark-mode');
+});
